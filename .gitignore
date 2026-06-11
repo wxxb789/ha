@@ -1,0 +1,40 @@
+# Generated HTML artifacts and their related assets.
+# Reports, dashboards, visualizations, screenshots, and any backing
+# assets (CSS, JS, images, fonts, JSON/data files) are written here by
+# agents/tools and must stay out of version control.
+.tmp-artifacts/
+
+# ──────────────────────────────────────────────────────────────────────
+# PUBLIC REPO — never track secrets or personal info.
+# Commit templates/examples only; keep real values in a secret manager
+# or in the gitignored patterns below.
+# ──────────────────────────────────────────────────────────────────────
+
+# Secrets & credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+*.token
+*.secret
+*.credentials
+auth.json
+**/auth.json
+credentials.json
+**/credentials/
+.secrets/
+secrets/
+
+# Personal / machine-specific / private (keep untracked, not shareable)
+*.local
+*.local.*
+private/
+**/private/
+*.private.*
+
+# Local agent / tooling state (may contain session or personal data)
+.omo/
+.codegraph/
