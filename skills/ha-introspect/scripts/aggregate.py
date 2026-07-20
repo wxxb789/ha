@@ -83,9 +83,12 @@ def read_bundle(path: Path) -> tuple[dict[str, object], list[dict[str, object]]]
     if not rows or not isinstance(rows[0], dict):
         raise ValueError("JSONL bundle needs a manifest row")
     first = rows[0]
-    manifest = first.get("coverage_manifest", first)
-    if not isinstance(manifest, dict):
-        raise ValueError("JSONL bundle manifest must be an object")
+    if isinstance(first.get("coverage_manifest"), dict):
+        manifest = first["coverage_manifest"]
+    elif first.get("kind") == "coverage_manifest":
+        manifest = first
+    else:
+        raise ValueError("JSONL bundle must begin with a coverage-manifest row")
     return manifest, rows[1:]
 
 
@@ -189,8 +192,12 @@ def main() -> int:
     if not safe:
         print(json.dumps({"decision": "refuse", "reason": reason}))
         return 1
-    manifest, records = read_bundle(args.bundle)
-    facets = build_facets(manifest, records)
+    try:
+        manifest, records = read_bundle(args.bundle)
+        facets = build_facets(manifest, records)
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError, ValueError):
+        print(json.dumps({"decision": "error", "reason": "invalid-input"}))
+        return 2
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(facets, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return 0

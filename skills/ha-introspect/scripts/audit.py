@@ -71,9 +71,13 @@ def read_bundle(path: Path) -> tuple[dict[str, object], list[dict[str, object]]]
             rows.append(row)
     if not rows or not isinstance(rows[0], dict):
         raise ValueError(f"{path.name} needs a manifest row")
-    manifest = rows[0].get("coverage_manifest", rows[0])
-    if not isinstance(manifest, dict):
-        raise ValueError("JSONL bundle manifest must be an object")
+    first = rows[0]
+    if isinstance(first.get("coverage_manifest"), dict):
+        manifest = first["coverage_manifest"]
+    elif first.get("kind") == "coverage_manifest":
+        manifest = first
+    else:
+        raise ValueError("JSONL bundle must begin with a coverage-manifest row")
     return manifest, rows[1:]
 
 

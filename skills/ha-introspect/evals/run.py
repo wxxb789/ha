@@ -328,6 +328,28 @@ def assert_oversized_claims_rejected() -> None:
         assert not output.exists()
 
 
+def assert_manifest_first_required() -> None:
+    """Given a JSONL bundle whose first row is a record, then both tools reject it."""
+    record = {"kind": "record", "agent": "demo", "origin_fingerprint": "o1", "locator": {"file": "x", "line": 1}}
+    manifest = {"kind": "coverage_manifest", "sources": [{"agent": "demo", "status": "available"}]}
+    with tempfile.TemporaryDirectory() as directory:
+        root = Path(directory)
+        bundle = root / "bundle.jsonl"
+        bundle.write_text(json.dumps(record) + "\n" + json.dumps(manifest) + "\n", encoding="utf-8")
+        facets = root / "facets.json"
+        aggregated = run_script("aggregate.py", "--bundle", str(bundle), "--output", str(facets))
+        assert aggregated.returncode == 2
+        assert json.loads(aggregated.stdout) == {"decision": "error", "reason": "invalid-input"}
+        assert not facets.exists()
+        claims = root / "claims.json"
+        claims.write_text('{"claims": []}', encoding="utf-8")
+        verified = root / "verified.json"
+        audited = run_script("audit.py", "--bundle", str(bundle), "--claims", str(claims), "--output", str(verified))
+        assert audited.returncode == 2
+        assert json.loads(audited.stdout) == {"decision": "error", "reason": "invalid-input"}
+        assert not verified.exists()
+
+
 def main() -> int:
     """Execute all required synthetic fixtures."""
     assert_zero_candidates()
@@ -342,7 +364,8 @@ def main() -> int:
     assert_json_index_citations()
     assert_sqlite_citations()
     assert_oversized_claims_rejected()
-    print("PASS: zero blind spots; bad citation/source dropped; PII and output gates; JSONL and coverage isolation; corrupt Git; JSON index; SQLite; oversized claims")
+    assert_manifest_first_required()
+    print("PASS: zero blind spots; bad citation/source dropped; PII and output gates; JSONL and coverage isolation; corrupt Git; JSON index; SQLite; oversized claims; manifest-first required")
     return 0
 
 
