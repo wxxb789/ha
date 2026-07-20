@@ -1,0 +1,7 @@
+{
+  "coverage_manifest": {"generated_at": "2026-01-01T00:00:00Z", "time_window": {"from": "2026-01-01", "to": "2026-01-31"}, "sources": [{"agent": "demo-agent", "status": "available", "path_probed": "fixtures", "record_count": 2, "note": "synthetic"}]},
+  "records": [
+    {"source": "demo", "agent": "demo-agent", "project": "example", "session_id": "demo-session-c", "timestamp": "2026-01-04T00:00:00Z", "role_or_type": "user", "text_or_summary": "Synthetic source C.", "locator": {"file": "source-c.txt", "line": 1}, "origin_fingerprint": "origin-demo-c", "status_or_confidence": "available"},
+    {"source": "demo", "agent": "demo-agent", "project": "example", "session_id": "demo-session-d", "timestamp": "2026-01-05T00:00:00Z", "role_or_type": "user", "text_or_summary": "Synthetic source D.", "locator": {"file": "source-d.txt", "line": 1}, "origin_fingerprint": "origin-demo-d", "status_or_confidence": "available"}
+  ]
+}
