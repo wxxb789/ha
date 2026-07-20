@@ -27,9 +27,8 @@ targets:  runtime-agnostic | repo-only |
 
 | Artifact | Type | Areas | Targets | Path | Notes |
 |---|---|---|---|---|---|
-| _(示例)_ commit-push-pr | skill | software-development | runtime-agnostic | `skills/commit-push-pr/` | git commit / PR 流程 |
-| _(示例)_ plan-execute-verify | orchestration | software-development | repo-only | `orchestration/plan-execute-verify.md` | 控制模式;verify → retry |
-| _(示例)_ oracle | agent | software-development | repo-only | `agents/oracle.md` | 只读推理角色 |
-| _(示例)_ weekly-review | workflow | self-management, work-management | repo-only | `workflows/weekly-review.md` | 周五 retro + 下周计划 |
+| ha-agent-retrieve | skill | self-management, software-development | runtime-agnostic | `skills/ha-agent-retrieve/` | 跨 agent 历史 → 带 coverage manifest、已去重的 Retrieval Bundle |
+| ha-introspect | skill | self-management, work-management | runtime-agnostic | `skills/ha-introspect/` | 分层自省报告:确定性使用 facets（L1）+ 带证据的盲点审计（L2） |
+| ha-introspect-distill | skill | self-management, software-development | runtime-agnostic | `skills/ha-introspect-distill/` | 把已批准的可复用工作提炼成 skill（或 opt-in 的 rule/config），经 runtime 原生 skill-creator 或内联产出 |
 
-> 标 _(示例)_ 的行是占位——有真实 artifact 时替换掉。
+> 非 skill 类型（orchestration · agent · workflow · mcp · prompt · rule · eval · reflection）会在真实 artifact 落地时补充。

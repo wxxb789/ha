@@ -27,9 +27,8 @@ Hand-curated for now; Phase 3 may generate it from per-artifact metadata.
 
 | Artifact | Type | Areas | Targets | Path | Notes |
 |---|---|---|---|---|---|
-| _(example)_ commit-push-pr | skill | software-development | runtime-agnostic | `skills/commit-push-pr/` | git commit / PR flow |
-| _(example)_ plan-execute-verify | orchestration | software-development | repo-only | `orchestration/plan-execute-verify.md` | control pattern; verify → retry |
-| _(example)_ oracle | agent | software-development | repo-only | `agents/oracle.md` | read-only reasoning role |
-| _(example)_ weekly-review | workflow | self-management, work-management | repo-only | `workflows/weekly-review.md` | Friday retro + next-week plan |
+| ha-agent-retrieve | skill | self-management, software-development | runtime-agnostic | `skills/ha-agent-retrieve/` | cross-agent history → coverage-manifested, deduped Retrieval Bundle |
+| ha-introspect | skill | self-management, work-management | runtime-agnostic | `skills/ha-introspect/` | layered self-report: deterministic usage facets (L1) + evidence-cited blind-spot audit (L2) |
+| ha-introspect-distill | skill | self-management, software-development | runtime-agnostic | `skills/ha-introspect-distill/` | distill approved repeatable work into a skill (or opt-in rule/config) via the runtime-native skill-creator or inline |
 
-> _(example)_ rows are placeholders — replace them as real artifacts land.
+> Non-skill types (orchestration · agent · workflow · mcp · prompt · rule · eval · reflection) populate as real artifacts land.
