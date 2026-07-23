@@ -54,6 +54,7 @@
 	path = ref/zhengxi-views
 	url = https://github.com/lyra81604/zhengxi-views
 	branch = main
+	ignore = dirty
 [submodule "ref/looper"]
 	path = ref/looper
 	url = https://github.com/ksimback/looper
