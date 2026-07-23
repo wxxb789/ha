@@ -1,0 +1,160 @@
+[submodule "ref/compound-engineering-plugin"]
+	path = ref/compound-engineering-plugin
+	url = https://github.com/EveryInc/compound-engineering-plugin
+	branch = main
+[submodule "ref/compound-knowledge-plugin"]
+	path = ref/compound-knowledge-plugin
+	url = https://github.com/EveryInc/compound-knowledge-plugin
+	branch = main
+[submodule "ref/superpowers"]
+	path = ref/superpowers
+	url = https://github.com/obra/superpowers
+	branch = main
+[submodule "ref/mattpocock-skills"]
+	path = ref/mattpocock-skills
+	url = https://github.com/mattpocock/skills
+	branch = main
+[submodule "ref/caveman"]
+	path = ref/caveman
+	url = https://github.com/juliusbrussee/caveman
+	branch = main
+[submodule "ref/baoyu-skills"]
+	path = ref/baoyu-skills
+	url = https://github.com/JimLiu/baoyu-skills
+	branch = main
+[submodule "ref/baoyu-design"]
+	path = ref/baoyu-design
+	url = https://github.com/JimLiu/baoyu-design
+	branch = main
+[submodule "ref/ljg-skills"]
+	path = ref/ljg-skills
+	url = https://github.com/lijigang/ljg-skills
+	branch = master
+[submodule "ref/zhijian-skills"]
+	path = ref/zhijian-skills
+	url = https://github.com/zjp1997720/zhijian-skills
+	branch = main
+[submodule "ref/god-skill"]
+	path = ref/god-skill
+	url = https://github.com/fattly/god-skill
+	branch = main
+[submodule "ref/dbskill"]
+	path = ref/dbskill
+	url = https://github.com/dontbesilent2025/dbskill
+	branch = main
+[submodule "ref/Waza"]
+	path = ref/Waza
+	url = https://github.com/tw93/Waza
+	branch = main
+[submodule "ref/Kami"]
+	path = ref/Kami
+	url = https://github.com/tw93/Kami
+	branch = main
+[submodule "ref/zhengxi-views"]
+	path = ref/zhengxi-views
+	url = https://github.com/lyra81604/zhengxi-views
+	branch = main
+[submodule "ref/looper"]
+	path = ref/looper
+	url = https://github.com/ksimback/looper
+	branch = main
+[submodule "ref/no-mistakes"]
+	path = ref/no-mistakes
+	url = https://github.com/kunchenguid/no-mistakes
+	branch = main
+[submodule "ref/gnhf"]
+	path = ref/gnhf
+	url = https://github.com/kunchenguid/gnhf
+	branch = main
+[submodule "ref/lavish-axi"]
+	path = ref/lavish-axi
+	url = https://github.com/kunchenguid/lavish-axi
+	branch = main
+[submodule "ref/no-ai-slop"]
+	path = ref/no-ai-slop
+	url = https://github.com/petergyang/no-ai-slop
+	branch = main
+[submodule "ref/last30days-skill"]
+	path = ref/last30days-skill
+	url = https://github.com/mvanhorn/last30days-skill
+	branch = main
+[submodule "ref/colleague-skill"]
+	path = ref/colleague-skill
+	url = https://github.com/titanwings/colleague-skill
+	branch = dot-skill
+[submodule "ref/nuwa-skill"]
+	path = ref/nuwa-skill
+	url = https://github.com/alchaincyf/nuwa-skill
+	branch = main
+[submodule "ref/yourself-skill"]
+	path = ref/yourself-skill
+	url = https://github.com/notdog1998/yourself-skill
+	branch = master
+[submodule "ref/forge-skill"]
+	path = ref/forge-skill
+	url = https://github.com/YIKUAIBANZI/forge-skill
+	branch = main
+[submodule "ref/huashu-design"]
+	path = ref/huashu-design
+	url = https://github.com/alchaincyf/huashu-design
+	branch = master
+[submodule "ref/yao-open-skills"]
+	path = ref/yao-open-skills
+	url = https://github.com/yaojingang/yao-open-skills
+	branch = main
+[submodule "ref/yao-open-prompts"]
+	path = ref/yao-open-prompts
+	url = https://github.com/yaojingang/yao-open-prompts
+	branch = main
+[submodule "ref/yao-meta-skill"]
+	path = ref/yao-meta-skill
+	url = https://github.com/yaojingang/yao-meta-skill
+	branch = main
+[submodule "ref/dexter"]
+	path = ref/dexter
+	url = https://github.com/virattt/dexter
+	branch = main
+[submodule "ref/say-it-human"]
+	path = ref/say-it-human
+	url = https://github.com/taxueseek/say-it-human
+	branch = main
+[submodule "ref/humanizer"]
+	path = ref/humanizer
+	url = https://github.com/blader/humanizer
+	branch = main
+[submodule "ref/Humanizer-zh"]
+	path = ref/Humanizer-zh
+	url = https://github.com/op7418/Humanizer-zh
+	branch = main
+[submodule "ref/shuorenhua"]
+	path = ref/shuorenhua
+	url = https://github.com/MrGeDiao/shuorenhua
+	branch = main
+[submodule "ref/taste-skill"]
+	path = ref/taste-skill
+	url = https://github.com/Leonxlnx/taste-skill
+	branch = main
+[submodule "ref/ECC"]
+	path = ref/ECC
+	url = https://github.com/affaan-m/ECC
+	branch = main
+[submodule "ref/andrej-karpathy-skills"]
+	path = ref/andrej-karpathy-skills
+	url = https://github.com/multica-ai/andrej-karpathy-skills
+	branch = main
+[submodule "ref/gstack"]
+	path = ref/gstack
+	url = https://github.com/garrytan/gstack
+	branch = main
+[submodule "ref/anthropics-skills"]
+	path = ref/anthropics-skills
+	url = https://github.com/anthropics/skills
+	branch = main
+[submodule "ref/auto_research-site"]
+	path = ref/auto_research-site
+	url = https://github.com/victorchen96/victorchen96.github.io
+	branch = main
+[submodule "ref/knowledge-work-plugins"]
+	path = ref/knowledge-work-plugins
+	url = https://github.com/anthropics/knowledge-work-plugins
+	branch = main
